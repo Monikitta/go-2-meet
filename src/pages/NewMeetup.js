@@ -7,7 +7,7 @@ function NewMeetupPage() {
   //to receive data from child component(NewMeetupForm)
   function addMeetupHandler(meetupData) {
     fetch(
-      'https://react-go2meet-app-default-rtdb.firebaseio.com/meetups.json', //to send http request to database
+      'https://go-2-explore-default-rtdb.firebaseio.com/meetups.json', //to send http request to database
       {
         method: 'POST', // to store the data in Firebase
         body: JSON.stringify(meetupData),
