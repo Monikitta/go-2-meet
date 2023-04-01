@@ -9,15 +9,15 @@ function AllMeetupsPage() {
 
    useEffect(() => {
     setIsLoading(true);
-    fetch('https://react-go2meet-app-default-rtdb.firebaseio.com/meetups.json')
+    fetch('https://go-2-explore-default-rtdb.firebaseio.com/meetups.json')
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        const meetups = [];
+        const meetups = [];          //to transform the data coming from database from object to array
 
-        for (const key in data) {
-          //the key(randomly generated) is coming from our database
+        //the key(randomly generated) is coming from our database
+        for (const key in data) {          
           const meetup = {
             id: key,
             ...data[key],
